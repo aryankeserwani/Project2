@@ -5,7 +5,8 @@
 #   "pandas",
 #   "matplotlib",
 #   "seaborn",
-#   "json"
+#   "json", 
+#   "sklearn", 
 # ]
 # ///
 import os
@@ -135,7 +136,7 @@ def narrate_analysis(context, file_path):
 
 if __name__ == "__main__":
     # Replace with the file path of your dataset
-    file_paths = ["C:\Users\KIIT\Downloads\happiness.csv", "C:\Users\KIIT\Downloads\goodreads.csv"]
+    file_path = ["C:\Users\KIIT\Downloads\happiness.csv", "C:\Users\KIIT\Downloads\goodreads.csv","C:\Users\KIIT\Downloads\media.csv"]
 
     for file_path in file_paths:
         context = analyze_csv(file_path)
