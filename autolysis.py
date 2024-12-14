@@ -6,7 +6,8 @@
 #   "matplotlib",
 #   "seaborn",
 #   "scikit-learn",
-#   "python-dotenv"
+#   "python-dotenv",
+#   "chardet",
 # ]
 # ///
 
@@ -25,17 +26,25 @@ from os import getenv
 import requests
 import json
 import matplotlib
+import chardet
 
 load_dotenv()
 matplotlib.use('Agg')
 
+def detect_encoding(file_path):
+    with open(file_path, 'rb') as f:
+        raw_data = f.read()
+        result = chardet.detect(raw_data)
+        return result['encoding']
+
 def analyze_csv(file_path):
-    # Load the dataset
+    encoding = detect_encoding(file_path)
     try:
-        data = pd.read_csv(file_path)
+        data = pd.read_csv(file_path, encoding=encoding)
     except Exception as e:
-        print(f"Error reading {file_path}: {e}")
+        print(f"Error reading {file_path} with encoding {encoding}: {e}")
         return
+
 
     # Basic information
     print(f"Dataset: {file_path}\n")
@@ -133,7 +142,7 @@ def narrate_analysis(context, file_path):
     }
 
     try:
-        response = requests.post(url, headers=headers, json=data)
+        response = requests.post(url=url, headers=headers, json=data)
         response.raise_for_status()
         story = response.json()["choices"][0]["message"]["content"].strip()
         with open('README.md', 'w') as f:
