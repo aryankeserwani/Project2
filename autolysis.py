@@ -24,12 +24,14 @@ from sklearn.ensemble import IsolationForest
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
+from os.path import splitext, basename
 from dotenv import load_dotenv
 from os import getenv
 import requests
 import json
 import matplotlib
 import chardet
+
 
 load_dotenv()
 matplotlib.use('Agg')
@@ -160,18 +162,25 @@ def analyze_csv(file_path):
     return context
 
 def narrate_analysis(context, file_path):
-    base_name = os.path.splitext(os.path.basename(file_path))[0]  # Extracts the base name of the file
+    base_name = splitext(basename(file_path))[0]  # Extracts the base name of the file
     readme_file = f"{base_name}_README.md"
 
     url = "https://aiproxy.sanand.workers.dev/openai/v1/chat/completions"
     api_key = os.getenv("AIPROXY_TOKEN")
 
+    # Prepare a detailed prompt for the LLM
     prompt = (
         f"Analyze the dataset '{file_path}'. Here is the context:\n"
         f"Columns and types: {context['columns']}, {context['dtypes']}\n"
         f"Missing values: {context['missing_values']}\n"
         f"Summary statistics: {context['summary']}\n"
-        "Write a narrative describing the dataset and insights from the analysis."
+        "Generate insights and provide a structured Markdown report, including:\n"
+        "1. Dataset Overview: Highlight important features and missing values.\n"
+        "2. Correlation Analysis: Explain the correlation matrix and its implications.\n"
+        "3. Clustering Analysis: Interpret PCA and t-SNE visualizations.\n"
+        "4. Outlier Detection: Discuss patterns and anomalies identified.\n"
+        "5. Regression Analysis: Summarize performance metrics and feature importance.\n"
+        "6. Conclusion: Provide a final summary of all findings."
     )
 
     headers = {
@@ -187,6 +196,7 @@ def narrate_analysis(context, file_path):
     }
 
     try:
+        # Request LLM to generate narrative
         response = requests.post(url, headers=headers, json=data)
         response.raise_for_status()
         story = response.json()["choices"][0]["message"]["content"].strip()
@@ -194,48 +204,15 @@ def narrate_analysis(context, file_path):
         print(f"Error generating narrative: {e}")
         story = "Error generating narrative."
 
-    # Prepare the Markdown content
-    readme_content = f"# Analysis of {file_path}\n\n"
-    
-    # Add the context and tables
-    readme_content += "## Summary Statistics\n\n"
-    summary_str = json.dumps(context['summary'], indent=2)
-    readme_content += f"```\n{summary_str}\n```\n"
-
-    readme_content += "## Missing Values\n\n"
-    missing_values_str = json.dumps(context['missing_values'], indent=2)
-    readme_content += f"```\n{missing_values_str}\n```\n"
-    
-    # Add images and analysis of the plots
-    readme_content += "## Clustering (PCA and t-SNE)\n\n"
-    readme_content += f"### PCA Clustering\n![PCA Clustering]({context['images']['clustering_pca']})\n"
-    readme_content += "PCA visualization shows how the dataset clusters into groups based on the first two principal components.\n\n"
-    readme_content += f"### t-SNE Clustering\n![t-SNE Clustering]({context['images']['clustering_tsne']})\n"
-    readme_content += "t-SNE further refines the cluster visualization in a two-dimensional space.\n\n"
-    
-    readme_content += "## Outlier Detection\n\n"
-    readme_content += f"![Outlier Detection]({context['images']['outliers']})\n"
-    readme_content += "This plot shows the results of outlier detection using the Isolation Forest model.\n\n"
-    
-    readme_content += "## Regression Analysis\n\n"
-    readme_content += f"![Regression Analysis]({context['images']['regression']})\n"
-    readme_content += "Linear regression results in the red line overlaid on the scatter plot. The model's performance is measured by MSE and R2.\n"
-    
-    # Final conclusion
-    readme_content += "## Conclusion\n\n"
-    readme_content += "Based on the analysis, we can conclude the following:\n"
-    readme_content += "- Clusters are well-defined in both PCA and t-SNE plots.\n"
-    readme_content += "- Outliers were identified and might need further investigation or removal.\n"
-    readme_content += "- The regression model performed with an R2 value indicating a decent fit to the data.\n"
-    readme_content += f"Summary statistics and missing values have been reviewed for further preprocessing.\n"
-
     # Save the generated analysis to the README file
     try:
         with open(readme_file, 'w') as f:
-            f.write(readme_content)
+            f.write(story)
         print(f"Narrative saved to {readme_file}")
     except Exception as e:
         print(f"Error saving README: {e}")
+
+
 
 
 if __name__ == "__main__":
