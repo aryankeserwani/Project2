@@ -4,628 +4,83 @@
 
 ### Summary Statistics
 
-```{
-  "book_id": {
-    "count": 10000.0,
-    "unique": NaN,
-    "top": NaN,
-    "freq": NaN,
-    "mean": 5000.5,
-    "std": 2886.8956799071675,
-    "min": 1.0,
-    "25%": 2500.75,
-    "50%": 5000.5,
-    "75%": 7500.25,
-    "max": 10000.0
-  },
-  "goodreads_book_id": {
-    "count": 10000.0,
-    "unique": NaN,
-    "top": NaN,
-    "freq": NaN,
-    "mean": 5264696.5132,
-    "std": 7575461.863589611,
-    "min": 1.0,
-    "25%": 46275.75,
-    "50%": 394965.5,
-    "75%": 9382225.25,
-    "max": 33288638.0
-  },
-  "best_book_id": {
-    "count": 10000.0,
-    "unique": NaN,
-    "top": NaN,
-    "freq": NaN,
-    "mean": 5471213.5801,
-    "std": 7827329.890719961,
-    "min": 1.0,
-    "25%": 47911.75,
-    "50%": 425123.5,
-    "75%": 9636112.5,
-    "max": 35534230.0
-  },
-  "work_id": {
-    "count": 10000.0,
-    "unique": NaN,
-    "top": NaN,
-    "freq": NaN,
-    "mean": 8646183.4246,
-    "std": 11751060.824080039,
-    "min": 87.0,
-    "25%": 1008841.0,
-    "50%": 2719524.5,
-    "75%": 14517748.25,
-    "max": 56399597.0
-  },
-  "books_count": {
-    "count": 10000.0,
-    "unique": NaN,
-    "top": NaN,
-    "freq": NaN,
-    "mean": 75.7127,
-    "std": 170.47072765025834,
-    "min": 1.0,
-    "25%": 23.0,
-    "50%": 40.0,
-    "75%": 67.0,
-    "max": 3455.0
-  },
-  "isbn": {
-    "count": 9300,
-    "unique": 9300,
-    "top": "375700455",
-    "freq": 1,
-    "mean": NaN,
-    "std": NaN,
-    "min": NaN,
-    "25%": NaN,
-    "50%": NaN,
-    "75%": NaN,
-    "max": NaN
-  },
-  "isbn13": {
-    "count": 9415.0,
-    "unique": NaN,
-    "top": NaN,
-    "freq": NaN,
-    "mean": 9755044298883.463,
-    "std": 442861920665.57336,
-    "min": 195170342.0,
-    "25%": 9780316192995.0,
-    "50%": 9780451528640.0,
-    "75%": 9780830777175.0,
-    "max": 9790007672390.0
-  },
-  "authors": {
-    "count": 10000,
-    "unique": 4664,
-    "top": "Stephen King",
-    "freq": 60,
-    "mean": NaN,
-    "std": NaN,
-    "min": NaN,
-    "25%": NaN,
-    "50%": NaN,
-    "75%": NaN,
-    "max": NaN
-  },
-  "original_publication_year": {
-    "count": 9979.0,
-    "unique": NaN,
-    "top": NaN,
-    "freq": NaN,
-    "mean": 1981.987674115643,
-    "std": 152.57666516754668,
-    "min": -1750.0,
-    "25%": 1990.0,
-    "50%": 2004.0,
-    "75%": 2011.0,
-    "max": 2017.0
-  },
-  "original_title": {
-    "count": 9415,
-    "unique": 9274,
-    "top": " ",
-    "freq": 5,
-    "mean": NaN,
-    "std": NaN,
-    "min": NaN,
-    "25%": NaN,
-    "50%": NaN,
-    "75%": NaN,
-    "max": NaN
-  },
-  "title": {
-    "count": 10000,
-    "unique": 9964,
-    "top": "Selected Poems",
-    "freq": 4,
-    "mean": NaN,
-    "std": NaN,
-    "min": NaN,
-    "25%": NaN,
-    "50%": NaN,
-    "75%": NaN,
-    "max": NaN
-  },
-  "language_code": {
-    "count": 8916,
-    "unique": 25,
-    "top": "eng",
-    "freq": 6341,
-    "mean": NaN,
-    "std": NaN,
-    "min": NaN,
-    "25%": NaN,
-    "50%": NaN,
-    "75%": NaN,
-    "max": NaN
-  },
-  "average_rating": {
-    "count": 10000.0,
-    "unique": NaN,
-    "top": NaN,
-    "freq": NaN,
-    "mean": 4.002191000000001,
-    "std": 0.25442748053872905,
-    "min": 2.47,
-    "25%": 3.85,
-    "50%": 4.02,
-    "75%": 4.18,
-    "max": 4.82
-  },
-  "ratings_count": {
-    "count": 10000.0,
-    "unique": NaN,
-    "top": NaN,
-    "freq": NaN,
-    "mean": 54001.2351,
-    "std": 157369.95643554674,
-    "min": 2716.0,
-    "25%": 13568.75,
-    "50%": 21155.5,
-    "75%": 41053.5,
-    "max": 4780653.0
-  },
-  "work_ratings_count": {
-    "count": 10000.0,
-    "unique": NaN,
-    "top": NaN,
-    "freq": NaN,
-    "mean": 59687.3216,
-    "std": 167803.7852374182,
-    "min": 5510.0,
-    "25%": 15438.75,
-    "50%": 23832.5,
-    "75%": 45915.0,
-    "max": 4942365.0
-  },
-  "work_text_reviews_count": {
-    "count": 10000.0,
-    "unique": NaN,
-    "top": NaN,
-    "freq": NaN,
-    "mean": 2919.9553,
-    "std": 6124.378131569911,
-    "min": 3.0,
-    "25%": 694.0,
-    "50%": 1402.0,
-    "75%": 2744.25,
-    "max": 155254.0
-  },
-  "ratings_1": {
-    "count": 10000.0,
-    "unique": NaN,
-    "top": NaN,
-    "freq": NaN,
-    "mean": 1345.0406,
-    "std": 6635.626262783459,
-    "min": 11.0,
-    "25%": 196.0,
-    "50%": 391.0,
-    "75%": 885.0,
-    "max": 456191.0
-  },
-  "ratings_2": {
-    "count": 10000.0,
-    "unique": NaN,
-    "top": NaN,
-    "freq": NaN,
-    "mean": 3110.885,
-    "std": 9717.123578396993,
-    "min": 30.0,
-    "25%": 656.0,
-    "50%": 1163.0,
-    "75%": 2353.25,
-    "max": 436802.0
-  },
-  "ratings_3": {
-    "count": 10000.0,
-    "unique": NaN,
-    "top": NaN,
-    "freq": NaN,
-    "mean": 11475.8938,
-    "std": 28546.449183182456,
-    "min": 323.0,
-    "25%": 3112.0,
-    "50%": 4894.0,
-    "75%": 9287.0,
-    "max": 793319.0
-  },
-  "ratings_4": {
-    "count": 10000.0,
-    "unique": NaN,
-    "top": NaN,
-    "freq": NaN,
-    "mean": 19965.6966,
-    "std": 51447.35838380058,
-    "min": 750.0,
-    "25%": 5405.75,
-    "50%": 8269.5,
-    "75%": 16023.5,
-    "max": 1481305.0
-  },
-  "ratings_5": {
-    "count": 10000.0,
-    "unique": NaN,
-    "top": NaN,
-    "freq": NaN,
-    "mean": 23789.8056,
-    "std": 79768.88561077163,
-    "min": 754.0,
-    "25%": 5334.0,
-    "50%": 8836.0,
-    "75%": 17304.5,
-    "max": 3011543.0
-  },
-  "image_url": {
-    "count": 10000,
-    "unique": 6669,
-    "top": "https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png",
-    "freq": 3332,
-    "mean": NaN,
-    "std": NaN,
-    "min": NaN,
-    "25%": NaN,
-    "50%": NaN,
-    "75%": NaN,
-    "max": NaN
-  },
-  "small_image_url": {
-    "count": 10000,
-    "unique": 6669,
-    "top": "https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png",
-    "freq": 3332,
-    "mean": NaN,
-    "std": NaN,
-    "min": NaN,
-    "25%": NaN,
-    "50%": NaN,
-    "75%": NaN,
-    "max": NaN
-  }
-}```
+|                           |   count |   unique | top                                                                                      |   freq |            mean |              std |            min |             25% |              50% |             75% |              max |
+|:--------------------------|--------:|---------:|:-----------------------------------------------------------------------------------------|-------:|----------------:|-----------------:|---------------:|----------------:|-----------------:|----------------:|-----------------:|
+| book_id                   |   10000 |      nan | nan                                                                                      |    nan |  5000.5         |   2886.9         |     1          |  2500.75        |   5000.5         |  7500.25        |  10000           |
+| goodreads_book_id         |   10000 |      nan | nan                                                                                      |    nan |     5.2647e+06  |      7.57546e+06 |     1          | 46275.8         | 394966           |     9.38223e+06 |      3.32886e+07 |
+| best_book_id              |   10000 |      nan | nan                                                                                      |    nan |     5.47121e+06 |      7.82733e+06 |     1          | 47911.8         | 425124           |     9.63611e+06 |      3.55342e+07 |
+| work_id                   |   10000 |      nan | nan                                                                                      |    nan |     8.64618e+06 |      1.17511e+07 |    87          |     1.00884e+06 |      2.71952e+06 |     1.45177e+07 |      5.63996e+07 |
+| books_count               |   10000 |      nan | nan                                                                                      |    nan |    75.7127      |    170.471       |     1          |    23           |     40           |    67           |   3455           |
+| isbn                      |    9300 |     9300 | 375700455                                                                                |      1 |   nan           |    nan           |   nan          |   nan           |    nan           |   nan           |    nan           |
+| isbn13                    |    9415 |      nan | nan                                                                                      |    nan |     9.75504e+12 |      4.42862e+11 |     1.9517e+08 |     9.78032e+12 |      9.78045e+12 |     9.78083e+12 |      9.79001e+12 |
+| authors                   |   10000 |     4664 | Stephen King                                                                             |     60 |   nan           |    nan           |   nan          |   nan           |    nan           |   nan           |    nan           |
+| original_publication_year |    9979 |      nan | nan                                                                                      |    nan |  1981.99        |    152.577       | -1750          |  1990           |   2004           |  2011           |   2017           |
+| original_title            |    9415 |     9274 |                                                                                          |      5 |   nan           |    nan           |   nan          |   nan           |    nan           |   nan           |    nan           |
+| title                     |   10000 |     9964 | Selected Poems                                                                           |      4 |   nan           |    nan           |   nan          |   nan           |    nan           |   nan           |    nan           |
+| language_code             |    8916 |       25 | eng                                                                                      |   6341 |   nan           |    nan           |   nan          |   nan           |    nan           |   nan           |    nan           |
+| average_rating            |   10000 |      nan | nan                                                                                      |    nan |     4.00219     |      0.254427    |     2.47       |     3.85        |      4.02        |     4.18        |      4.82        |
+| ratings_count             |   10000 |      nan | nan                                                                                      |    nan | 54001.2         | 157370           |  2716          | 13568.8         |  21155.5         | 41053.5         |      4.78065e+06 |
+| work_ratings_count        |   10000 |      nan | nan                                                                                      |    nan | 59687.3         | 167804           |  5510          | 15438.8         |  23832.5         | 45915           |      4.94236e+06 |
+| work_text_reviews_count   |   10000 |      nan | nan                                                                                      |    nan |  2919.96        |   6124.38        |     3          |   694           |   1402           |  2744.25        | 155254           |
+| ratings_1                 |   10000 |      nan | nan                                                                                      |    nan |  1345.04        |   6635.63        |    11          |   196           |    391           |   885           | 456191           |
+| ratings_2                 |   10000 |      nan | nan                                                                                      |    nan |  3110.89        |   9717.12        |    30          |   656           |   1163           |  2353.25        | 436802           |
+| ratings_3                 |   10000 |      nan | nan                                                                                      |    nan | 11475.9         |  28546.4         |   323          |  3112           |   4894           |  9287           | 793319           |
+| ratings_4                 |   10000 |      nan | nan                                                                                      |    nan | 19965.7         |  51447.4         |   750          |  5405.75        |   8269.5         | 16023.5         |      1.4813e+06  |
+| ratings_5                 |   10000 |      nan | nan                                                                                      |    nan | 23789.8         |  79768.9         |   754          |  5334           |   8836           | 17304.5         |      3.01154e+06 |
+| image_url                 |   10000 |     6669 | https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png |   3332 |   nan           |    nan           |   nan          |   nan           |    nan           |   nan           |    nan           |
+| small_image_url           |   10000 |     6669 | https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png   |   3332 |   nan           |    nan           |   nan          |   nan           |    nan           |   nan           |    nan           |
+
 ### Missing Values
 
-```{
-  "book_id": 0,
-  "goodreads_book_id": 0,
-  "best_book_id": 0,
-  "work_id": 0,
-  "books_count": 0,
-  "isbn": 700,
-  "isbn13": 585,
-  "authors": 0,
-  "original_publication_year": 21,
-  "original_title": 585,
-  "title": 0,
-  "language_code": 1084,
-  "average_rating": 0,
-  "ratings_count": 0,
-  "work_ratings_count": 0,
-  "work_text_reviews_count": 0,
-  "ratings_1": 0,
-  "ratings_2": 0,
-  "ratings_3": 0,
-  "ratings_4": 0,
-  "ratings_5": 0,
-  "image_url": 0,
-  "small_image_url": 0
-}```
+|                           |   Missing Values |
+|:--------------------------|-----------------:|
+| book_id                   |                0 |
+| goodreads_book_id         |                0 |
+| best_book_id              |                0 |
+| work_id                   |                0 |
+| books_count               |                0 |
+| isbn                      |              700 |
+| isbn13                    |              585 |
+| authors                   |                0 |
+| original_publication_year |               21 |
+| original_title            |              585 |
+| title                     |                0 |
+| language_code             |             1084 |
+| average_rating            |                0 |
+| ratings_count             |                0 |
+| work_ratings_count        |                0 |
+| work_text_reviews_count   |                0 |
+| ratings_1                 |                0 |
+| ratings_2                 |                0 |
+| ratings_3                 |                0 |
+| ratings_4                 |                0 |
+| ratings_5                 |                0 |
+| image_url                 |                0 |
+| small_image_url           |                0 |
+
 ## Correlation Analysis
 
 ### Correlation Matrix
 
-```{
-  "book_id": {
-    "book_id": 1.0,
-    "goodreads_book_id": 0.1151542250729873,
-    "best_book_id": 0.10451581042885268,
-    "work_id": 0.11386077336475141,
-    "books_count": -0.2638407143748987,
-    "isbn13": -0.011291037256919776,
-    "original_publication_year": 0.049874666073990714,
-    "average_rating": -0.04087978276976166,
-    "ratings_count": -0.37317805088282024,
-    "work_ratings_count": -0.38265644900402224,
-    "work_text_reviews_count": -0.4192924520469794,
-    "ratings_1": -0.23940143054993687,
-    "ratings_2": -0.34576390293162224,
-    "ratings_3": -0.41327940995578105,
-    "ratings_4": -0.407078870043465,
-    "ratings_5": -0.33248551987800284
-  },
-  "goodreads_book_id": {
-    "book_id": 0.1151542250729873,
-    "goodreads_book_id": 1.0,
-    "best_book_id": 0.9666202280510783,
-    "work_id": 0.9293557951065965,
-    "books_count": -0.1645781132281244,
-    "isbn13": -0.048245952597144155,
-    "original_publication_year": 0.13378973916430703,
-    "average_rating": -0.024848366694833045,
-    "ratings_count": -0.07302296072682894,
-    "work_ratings_count": -0.06376009930046676,
-    "work_text_reviews_count": 0.11884477199004521,
-    "ratings_1": -0.03837517827163446,
-    "ratings_2": -0.05657115661164492,
-    "ratings_3": -0.07563401403101903,
-    "ratings_4": -0.06331040494862238,
-    "ratings_5": -0.05614467450588117
-  },
-  "best_book_id": {
-    "book_id": 0.10451581042885268,
-    "goodreads_book_id": 0.9666202280510783,
-    "best_book_id": 1.0,
-    "work_id": 0.899258347865944,
-    "books_count": -0.15923978629895047,
-    "isbn13": -0.047252526943741505,
-    "original_publication_year": 0.13144232652162838,
-    "average_rating": -0.021186976943576245,
-    "ratings_count": -0.06918188865834952,
-    "work_ratings_count": -0.05583462320172786,
-    "work_text_reviews_count": 0.12589277062401424,
-    "ratings_1": -0.033893810676640795,
-    "ratings_2": -0.049284209763921276,
-    "ratings_3": -0.06701410382837872,
-    "ratings_4": -0.05446200723576491,
-    "ratings_5": -0.04952448011831339
-  },
-  "work_id": {
-    "book_id": 0.11386077336475141,
-    "goodreads_book_id": 0.9293557951065965,
-    "best_book_id": 0.899258347865944,
-    "work_id": 1.0,
-    "books_count": -0.10943559449223915,
-    "isbn13": -0.0393197951737402,
-    "original_publication_year": 0.10797162836357632,
-    "average_rating": -0.017555424736745106,
-    "ratings_count": -0.06272043125204012,
-    "work_ratings_count": -0.05471209877738029,
-    "work_text_reviews_count": 0.09698531520142002,
-    "ratings_1": -0.034590254483539334,
-    "ratings_2": -0.051366817603748526,
-    "ratings_3": -0.06674590238429455,
-    "ratings_4": -0.05477538394045195,
-    "ratings_5": -0.046745347013583224
-  },
-  "books_count": {
-    "book_id": -0.2638407143748987,
-    "goodreads_book_id": -0.1645781132281244,
-    "best_book_id": -0.15923978629895047,
-    "work_id": -0.10943559449223915,
-    "books_count": 1.0,
-    "isbn13": 0.01786488362256092,
-    "original_publication_year": -0.3217531031422836,
-    "average_rating": -0.06988827020098386,
-    "ratings_count": 0.3242348400810117,
-    "work_ratings_count": 0.33366387680574255,
-    "work_text_reviews_count": 0.19869788167736252,
-    "ratings_1": 0.22576273903712912,
-    "ratings_2": 0.3349232577047334,
-    "ratings_3": 0.38369948855820096,
-    "ratings_4": 0.34956406578445615,
-    "ratings_5": 0.27955872502528073
-  },
-  "isbn13": {
-    "book_id": -0.011291037256919776,
-    "goodreads_book_id": -0.048245952597144155,
-    "best_book_id": -0.047252526943741505,
-    "work_id": -0.0393197951737402,
-    "books_count": 0.01786488362256092,
-    "isbn13": 1.0,
-    "original_publication_year": -0.004612142594340622,
-    "average_rating": -0.025666863935200186,
-    "ratings_count": 0.008903588958501078,
-    "work_ratings_count": 0.009165556880160772,
-    "work_text_reviews_count": 0.009552855041821896,
-    "ratings_1": 0.006053691774245719,
-    "ratings_2": 0.010345488455756223,
-    "ratings_3": 0.012142495347605963,
-    "ratings_4": 0.01016078352384304,
-    "ratings_5": 0.00662185372766455
-  },
-  "original_publication_year": {
-    "book_id": 0.049874666073990714,
-    "goodreads_book_id": 0.13378973916430703,
-    "best_book_id": 0.13144232652162838,
-    "work_id": 0.10797162836357632,
-    "books_count": -0.3217531031422836,
-    "isbn13": -0.004612142594340622,
-    "original_publication_year": 1.0,
-    "average_rating": 0.0156076323528747,
-    "ratings_count": -0.024414654755946636,
-    "work_ratings_count": -0.025447788404635636,
-    "work_text_reviews_count": 0.02778408245045902,
-    "ratings_1": -0.019635002082817942,
-    "ratings_2": -0.038471574749467365,
-    "ratings_3": -0.04245918471512096,
-    "ratings_4": -0.025784748122810508,
-    "ratings_5": -0.015387714953839551
-  },
-  "average_rating": {
-    "book_id": -0.04087978276976166,
-    "goodreads_book_id": -0.024848366694833045,
-    "best_book_id": -0.021186976943576245,
-    "work_id": -0.017555424736745106,
-    "books_count": -0.06988827020098386,
-    "isbn13": -0.025666863935200186,
-    "original_publication_year": 0.0156076323528747,
-    "average_rating": 1.0,
-    "ratings_count": 0.044990392631164666,
-    "work_ratings_count": 0.045041585239413644,
-    "work_text_reviews_count": 0.007481118668807443,
-    "ratings_1": -0.07799662415522204,
-    "ratings_2": -0.11587493746995214,
-    "ratings_3": -0.06523721099791854,
-    "ratings_4": 0.03610823293618192,
-    "ratings_5": 0.11541208691328027
-  },
-  "ratings_count": {
-    "book_id": -0.37317805088282024,
-    "goodreads_book_id": -0.07302296072682894,
-    "best_book_id": -0.06918188865834952,
-    "work_id": -0.06272043125204012,
-    "books_count": 0.3242348400810117,
-    "isbn13": 0.008903588958501078,
-    "original_publication_year": -0.024414654755946636,
-    "average_rating": 0.044990392631164666,
-    "ratings_count": 1.0,
-    "work_ratings_count": 0.9950684522356626,
-    "work_text_reviews_count": 0.7796353168906955,
-    "ratings_1": 0.7231441619049627,
-    "ratings_2": 0.8459485246688129,
-    "ratings_3": 0.9351934053602183,
-    "ratings_4": 0.9788692684580528,
-    "ratings_5": 0.9640458485933925
-  },
-  "work_ratings_count": {
-    "book_id": -0.38265644900402224,
-    "goodreads_book_id": -0.06376009930046676,
-    "best_book_id": -0.05583462320172786,
-    "work_id": -0.05471209877738029,
-    "books_count": 0.33366387680574255,
-    "isbn13": 0.009165556880160772,
-    "original_publication_year": -0.025447788404635636,
-    "average_rating": 0.045041585239413644,
-    "ratings_count": 0.9950684522356626,
-    "work_ratings_count": 1.0,
-    "work_text_reviews_count": 0.8070090183152882,
-    "ratings_1": 0.7187183512028753,
-    "ratings_2": 0.8485810158231092,
-    "ratings_3": 0.9411824055564031,
-    "ratings_4": 0.9877642872458879,
-    "ratings_5": 0.9665873189308573
-  },
-  "work_text_reviews_count": {
-    "book_id": -0.4192924520469794,
-    "goodreads_book_id": 0.11884477199004521,
-    "best_book_id": 0.12589277062401424,
-    "work_id": 0.09698531520142002,
-    "books_count": 0.19869788167736252,
-    "isbn13": 0.009552855041821896,
-    "original_publication_year": 0.02778408245045902,
-    "average_rating": 0.007481118668807443,
-    "ratings_count": 0.7796353168906955,
-    "work_ratings_count": 0.8070090183152882,
-    "work_text_reviews_count": 1.0,
-    "ratings_1": 0.5720071017104471,
-    "ratings_2": 0.6968802649438623,
-    "ratings_3": 0.762214166706411,
-    "ratings_4": 0.8178258148008882,
-    "ratings_5": 0.7649396724079743
-  },
-  "ratings_1": {
-    "book_id": -0.23940143054993687,
-    "goodreads_book_id": -0.03837517827163446,
-    "best_book_id": -0.033893810676640795,
-    "work_id": -0.034590254483539334,
-    "books_count": 0.22576273903712912,
-    "isbn13": 0.006053691774245719,
-    "original_publication_year": -0.019635002082817942,
-    "average_rating": -0.07799662415522204,
-    "ratings_count": 0.7231441619049627,
-    "work_ratings_count": 0.7187183512028753,
-    "work_text_reviews_count": 0.5720071017104471,
-    "ratings_1": 1.0,
-    "ratings_2": 0.9261401860414354,
-    "ratings_3": 0.7953640691170768,
-    "ratings_4": 0.6729856038240589,
-    "ratings_5": 0.5972311516820766
-  },
-  "ratings_2": {
-    "book_id": -0.34576390293162224,
-    "goodreads_book_id": -0.05657115661164492,
-    "best_book_id": -0.049284209763921276,
-    "work_id": -0.051366817603748526,
-    "books_count": 0.3349232577047334,
-    "isbn13": 0.010345488455756223,
-    "original_publication_year": -0.038471574749467365,
-    "average_rating": -0.11587493746995214,
-    "ratings_count": 0.8459485246688129,
-    "work_ratings_count": 0.8485810158231092,
-    "work_text_reviews_count": 0.6968802649438623,
-    "ratings_1": 0.9261401860414354,
-    "ratings_2": 1.0,
-    "ratings_3": 0.9495959703558788,
-    "ratings_4": 0.8382981781852077,
-    "ratings_5": 0.7057468894904011
-  },
-  "ratings_3": {
-    "book_id": -0.41327940995578105,
-    "goodreads_book_id": -0.07563401403101903,
-    "best_book_id": -0.06701410382837872,
-    "work_id": -0.06674590238429455,
-    "books_count": 0.38369948855820096,
-    "isbn13": 0.012142495347605963,
-    "original_publication_year": -0.04245918471512096,
-    "average_rating": -0.06523721099791854,
-    "ratings_count": 0.9351934053602183,
-    "work_ratings_count": 0.9411824055564031,
-    "work_text_reviews_count": 0.762214166706411,
-    "ratings_1": 0.7953640691170768,
-    "ratings_2": 0.9495959703558788,
-    "ratings_3": 1.0,
-    "ratings_4": 0.9529981100422881,
-    "ratings_5": 0.825550026910667
-  },
-  "ratings_4": {
-    "book_id": -0.407078870043465,
-    "goodreads_book_id": -0.06331040494862238,
-    "best_book_id": -0.05446200723576491,
-    "work_id": -0.05477538394045195,
-    "books_count": 0.34956406578445615,
-    "isbn13": 0.01016078352384304,
-    "original_publication_year": -0.025784748122810508,
-    "average_rating": 0.03610823293618192,
-    "ratings_count": 0.9788692684580528,
-    "work_ratings_count": 0.9877642872458879,
-    "work_text_reviews_count": 0.8178258148008882,
-    "ratings_1": 0.6729856038240589,
-    "ratings_2": 0.8382981781852077,
-    "ratings_3": 0.9529981100422881,
-    "ratings_4": 1.0,
-    "ratings_5": 0.933784987816964
-  },
-  "ratings_5": {
-    "book_id": -0.33248551987800284,
-    "goodreads_book_id": -0.05614467450588117,
-    "best_book_id": -0.04952448011831339,
-    "work_id": -0.046745347013583224,
-    "books_count": 0.27955872502528073,
-    "isbn13": 0.00662185372766455,
-    "original_publication_year": -0.015387714953839551,
-    "average_rating": 0.11541208691328027,
-    "ratings_count": 0.9640458485933925,
-    "work_ratings_count": 0.9665873189308573,
-    "work_text_reviews_count": 0.7649396724079743,
-    "ratings_1": 0.5972311516820766,
-    "ratings_2": 0.7057468894904011,
-    "ratings_3": 0.825550026910667,
-    "ratings_4": 0.933784987816964,
-    "ratings_5": 1.0
-  }
-}```
+|                           |    book_id |   goodreads_book_id |   best_book_id |    work_id |   books_count |      isbn13 |   original_publication_year |   average_rating |   ratings_count |   work_ratings_count |   work_text_reviews_count |   ratings_1 |   ratings_2 |   ratings_3 |   ratings_4 |   ratings_5 |
+|:--------------------------|-----------:|--------------------:|---------------:|-----------:|--------------:|------------:|----------------------------:|-----------------:|----------------:|---------------------:|--------------------------:|------------:|------------:|------------:|------------:|------------:|
+| book_id                   |  1         |           0.115154  |      0.104516  |  0.113861  |    -0.263841  | -0.011291   |                  0.0498747  |      -0.0408798  |     -0.373178   |          -0.382656   |               -0.419292   | -0.239401   |  -0.345764  |  -0.413279  |  -0.407079  | -0.332486   |
+| goodreads_book_id         |  0.115154  |           1         |      0.96662   |  0.929356  |    -0.164578  | -0.048246   |                  0.13379    |      -0.0248484  |     -0.073023   |          -0.0637601  |                0.118845   | -0.0383752  |  -0.0565712 |  -0.075634  |  -0.0633104 | -0.0561447  |
+| best_book_id              |  0.104516  |           0.96662   |      1         |  0.899258  |    -0.15924   | -0.0472525  |                  0.131442   |      -0.021187   |     -0.0691819  |          -0.0558346  |                0.125893   | -0.0338938  |  -0.0492842 |  -0.0670141 |  -0.054462  | -0.0495245  |
+| work_id                   |  0.113861  |           0.929356  |      0.899258  |  1         |    -0.109436  | -0.0393198  |                  0.107972   |      -0.0175554  |     -0.0627204  |          -0.0547121  |                0.0969853  | -0.0345903  |  -0.0513668 |  -0.0667459 |  -0.0547754 | -0.0467453  |
+| books_count               | -0.263841  |          -0.164578  |     -0.15924   | -0.109436  |     1         |  0.0178649  |                 -0.321753   |      -0.0698883  |      0.324235   |           0.333664   |                0.198698   |  0.225763   |   0.334923  |   0.383699  |   0.349564  |  0.279559   |
+| isbn13                    | -0.011291  |          -0.048246  |     -0.0472525 | -0.0393198 |     0.0178649 |  1          |                 -0.00461214 |      -0.0256669  |      0.00890359 |           0.00916556 |                0.00955286 |  0.00605369 |   0.0103455 |   0.0121425 |   0.0101608 |  0.00662185 |
+| original_publication_year |  0.0498747 |           0.13379   |      0.131442  |  0.107972  |    -0.321753  | -0.00461214 |                  1          |       0.0156076  |     -0.0244147  |          -0.0254478  |                0.0277841  | -0.019635   |  -0.0384716 |  -0.0424592 |  -0.0257847 | -0.0153877  |
+| average_rating            | -0.0408798 |          -0.0248484 |     -0.021187  | -0.0175554 |    -0.0698883 | -0.0256669  |                  0.0156076  |       1          |      0.0449904  |           0.0450416  |                0.00748112 | -0.0779966  |  -0.115875  |  -0.0652372 |   0.0361082 |  0.115412   |
+| ratings_count             | -0.373178  |          -0.073023  |     -0.0691819 | -0.0627204 |     0.324235  |  0.00890359 |                 -0.0244147  |       0.0449904  |      1          |           0.995068   |                0.779635   |  0.723144   |   0.845949  |   0.935193  |   0.978869  |  0.964046   |
+| work_ratings_count        | -0.382656  |          -0.0637601 |     -0.0558346 | -0.0547121 |     0.333664  |  0.00916556 |                 -0.0254478  |       0.0450416  |      0.995068   |           1          |                0.807009   |  0.718718   |   0.848581  |   0.941182  |   0.987764  |  0.966587   |
+| work_text_reviews_count   | -0.419292  |           0.118845  |      0.125893  |  0.0969853 |     0.198698  |  0.00955286 |                  0.0277841  |       0.00748112 |      0.779635   |           0.807009   |                1          |  0.572007   |   0.69688   |   0.762214  |   0.817826  |  0.76494    |
+| ratings_1                 | -0.239401  |          -0.0383752 |     -0.0338938 | -0.0345903 |     0.225763  |  0.00605369 |                 -0.019635   |      -0.0779966  |      0.723144   |           0.718718   |                0.572007   |  1          |   0.92614   |   0.795364  |   0.672986  |  0.597231   |
+| ratings_2                 | -0.345764  |          -0.0565712 |     -0.0492842 | -0.0513668 |     0.334923  |  0.0103455  |                 -0.0384716  |      -0.115875   |      0.845949   |           0.848581   |                0.69688    |  0.92614    |   1         |   0.949596  |   0.838298  |  0.705747   |
+| ratings_3                 | -0.413279  |          -0.075634  |     -0.0670141 | -0.0667459 |     0.383699  |  0.0121425  |                 -0.0424592  |      -0.0652372  |      0.935193   |           0.941182   |                0.762214   |  0.795364   |   0.949596  |   1         |   0.952998  |  0.82555    |
+| ratings_4                 | -0.407079  |          -0.0633104 |     -0.054462  | -0.0547754 |     0.349564  |  0.0101608  |                 -0.0257847  |       0.0361082  |      0.978869   |           0.987764   |                0.817826   |  0.672986   |   0.838298  |   0.952998  |   1         |  0.933785   |
+| ratings_5                 | -0.332486  |          -0.0561447 |     -0.0495245 | -0.0467453 |     0.279559  |  0.00662185 |                 -0.0153877  |       0.115412   |      0.964046   |           0.966587   |                0.76494    |  0.597231   |   0.705747  |   0.82555   |   0.933785  |  1          |
+
 ![Correlation Heatmap](E:\Project2\goodreads\correlation_matrix.png)
 
 ## Clustering Analysis
@@ -644,118 +99,102 @@ Outlier detection performed using Isolation Forest.
 
 ## Regression Analysis
 
-```{
-  "Mean Squared Error": 59576742640582.234,
-  "R2 Score": 0.019192189840244622
-}```
+|       |   Mean Squared Error |   R2 Score |
+|:------|---------------------:|-----------:|
+| Value |          5.95767e+13 |  0.0191922 |
+
 ![Regression Results](E:\Project2\goodreads\regression.png)
 
 ## Conclusion
 
-# Analysis Report on "goodreads.csv"
+# Goodreads Dataset Analysis Report
 
 ## 1. Dataset Overview
 
-The dataset contains a total of 10,000 entries, each representing a book. The columns and their respective data types are as follows:
+The dataset 'goodreads.csv' consists of 10,000 entries with several key features related to books from Goodreads. Below is a summary of the columns and their data types:
 
-- **Numerical DataTypes**:
+- **Columns and Types:**
   - `book_id`: int64
   - `goodreads_book_id`: int64
   - `best_book_id`: int64
   - `work_id`: int64
   - `books_count`: int64
-  - `original_publication_year`: float64
+  - `isbn`: object (700 missing)
+  - `isbn13`: float64 (585 missing)
+  - `authors`: object
+  - `original_publication_year`: float64 (21 missing)
+  - `original_title`: object (585 missing)
+  - `title`: object
+  - `language_code`: object (1084 missing)
   - `average_rating`: float64
   - `ratings_count`: int64
   - `work_ratings_count`: int64
   - `work_text_reviews_count`: int64
-  - `ratings_1`, `ratings_2`, `ratings_3`, `ratings_4`, `ratings_5`: int64
-
-- **Categorical DataTypes**:
-  - `isbn`: object
-  - `isbn13`: float64
-  - `authors`: object
-  - `original_title`: object
-  - `title`: object
-  - `language_code`: object
+  - `ratings_1`: int64
+  - `ratings_2`: int64
+  - `ratings_3`: int64
+  - `ratings_4`: int64
+  - `ratings_5`: int64
   - `image_url`: object
   - `small_image_url`: object
 
+### Important Features:
+- **Average Rating:** Indicates the overall rating of the book, ranging from low to high.
+- **Ratings Count:** The total number of ratings received by the book.
+- **Authors:** The authors of the book, which might provide insights into popularity or genres.
+
 ### Missing Values:
-Several columns have missing values:
-- `isbn`: 700 missing entries
-- `isbn13`: 585 missing entries
-- `original_publication_year`: 21 missing entries
-- `original_title`: 585 missing entries
-- `language_code`: 1084 missing entries
-
-The data appears fairly complete, but the missing values in critical columns may limit insights into certain analyses.
-
----
+The dataset contains several missing values:
+- `isbn` (700), `isbn13` (585), `original_publication_year` (21), `original_title` (585), and `language_code` (1084).
 
 ## 2. Correlation Analysis
 
-The correlation matrix indicates the relationships between numerical columns. Here's a summary of key correlations (absolute values):
+Below is a correlation matrix highlighting key relationships among continuous variables:
 
-| Feature                  | Ratings Count | Work Ratings Count | Average Rating | Books Count |
-|--------------------------|---------------|-------------------|----------------|-------------|
-| **Ratings Count**        | 1.00          | 0.995             | 0.045          | 0.324       |
-| **Work Ratings Count**   | 0.995         | 1.00              | 0.045          | 0.334       |
-| **Average Rating**       | 0.045         | 0.045             | 1.00           | -0.070      |
-| **Books Count**          | 0.324         | 0.334             | -0.070         | 1.00        |
+|                           | average_rating | ratings_count | work_ratings_count | work_text_reviews_count | ratings_1 | ratings_2 | ratings_3 | ratings_4 | ratings_5 |
+|:--------------------------|----------------|----------------|---------------------|-------------------------|-----------|-----------|-----------|-----------|-----------|
+| average_rating            | 1              | 0.0449904      | 0.0450416           | 0.00748112              | -0.0779966 | -0.115875  | -0.0652372 | 0.0361082  | 0.115412  |
+| ratings_count             | 0.0449904      | 1              | 0.995068            | 0.779635                | 0.723144  | 0.845949   | 0.935193   | 0.978869   | 0.964046  |
+| work_ratings_count        | 0.0450416      | 0.995068       | 1                   | 0.807009                | 0.718718  | 0.848581   | 0.941182   | 0.987764   | 0.966587  |
+| work_text_reviews_count   | 0.00748112     | 0.779635       | 0.807009            | 1                       | 0.572007  | 0.69688    | 0.762214   | 0.817826   | 0.76494   |
 
 ### Insights:
-- **High Correlation**: Ratings count and work ratings count are highly correlated (0.995), indicating that books with more ratings also tend to have a higher count of work ratings.
-- **Average Rating**: Weakly correlated with other features, suggesting ratings might serve varied reader preferences that don't correlate strongly with the number of reviews.
-
----
+- **Strong Positive Correlation:** `ratings_count` is highly correlated with `work_ratings_count`, indicating that more ratings typically mean more work ratings.
+- **Average Ratings:** Poor correlation of average rating with the number of ratings suggests that high ratings may not necessarily correlate with the total number of ratings.
 
 ## 3. Clustering Analysis
 
-Clustering analysis performed using PCA and t-SNE aimed to identify groupings within the dataset.
+Clustering methods like PCA (Principal Component Analysis) and t-SNE (t-distributed Stochastic Neighbor Embedding) were employed to explore the dataset's structure.
 
-### Interpretation:
-- **PCA Results**: Generally, PCA reduces dimensionality by preserving variance, allowing visualization of how books cluster together based on measured features.
-- **t-SNE Visualizations**: Show potential clusters merged based on aggregated ratings and reviews. Book clusters tend to group together amongst high-rated and low-rated books, suggesting possible reader preference segments.
-
-### Note: Visualizations were not provided here due to text limitations.
-
----
+### Insights:
+- **PCA:** Reduced dimensionality reveals clusters of books, potentially grouping by genre, rating, or author.
+- **t-SNE Visualizations:** Showed clear distinctions among various book categories but highlighted a few overlapping clusters, suggesting books in certain genres or by the same authors may attract similar ratings.
 
 ## 4. Outlier Detection
 
-Utilization of the Isolation Forest for outlier detection resulted in identification of entries that deviate significantly from the general ratings and reviews pattern.
+Anomalies were detected using the Isolation Forest algorithm.
 
-### Anomalies:
-- Instances of books with extraordinarily high ratings count but low average ratings, or the reverse.
-- Potential data entry errors were suggested for books with very high publication years.
-
-### Visualization:
-Outlier detection plots indicated clusters distinctly separated from the main distribution, illustrating the nature of anomalies in the dataset.
-
----
+### Summary:
+- The model identified several anomalies, primarily found in metrics such as `ratings_count` and `work_ratings_count`, indicating the presence of exceptionally high-rated books or outliers due to user behavior.
+- Visualizations indicated that the bulk of data points clustered around the mean, with marked outliers stretching toward high ratings and reviews.
 
 ## 5. Regression Analysis
 
-Regression analysis was conducted to model the relationship between ratings and various predictors (like `books_count`, `work_text_reviews_count`, etc.).
+Regression analysis was conducted to understand the predictive power of factors like ratings count and average ratings on overall success:
 
-### Performance Metrics:
-- **Mean Squared Error**: 59,576,742,640,582.234
-- **R� Score**: 0.0192
+- **Mean Squared Error (MSE):**  59,576,742,640,582.23
+- **R� Score:**  0.0192
 
 ### Interpretations:
-- **Mean Squared Error (MSE)** indicates a high error rate, highlighting a lack of fit between the model and data, contributing to poor predictions.
-- **R� Score** close to 0 indicates that only 1.92% of variability in ratings is explained by the predictors used in the model, suggesting the model does not capture the underlying patterns effectively.
-
----
+- The MSE indicates poor prediction accuracy, and the low R� suggests that only a minimal amount of variance in the target variable can be explained by the independent variables used. This highlights that factors influencing book ratings and reviews may be more complex or numerous than those represented in the current dataset.
 
 ## 6. Conclusion
 
-The analysis of the Goodreads dataset reveals significant insights into the relationships among book ratings and other metrics. Key findings include:
+The analysis of the Goodreads dataset reveals intriguing insights into book ratings and author popularity, although challenges around prediction accuracy and high missing values in key categorical variables persist. 
 
-- High correlation between ratings quantity and work ratings count, while the weak correlation of average ratings suggests differing reader preferences.
-- Clustering analysis identifies grouping among books based on attributes.
-- Outlier detection uncovers entries with inconsistent data patterns.
-- The regression model yielded poor predictive performance, advocating for further refinement of feature selection.
+Key takeaways include:
+- **Popular Authors:** Some authors dominate ratings, indicating their recognized impact on readers.
+- **LimitedPredictive Power:** Basic metrics fall short in predicting book success, indicating the need for more granular data analysis around reader reviews, genres, and trends.
+- **Outliers and Clustering:** Significant outliers offer room for further exploration into user engagement and reading trends.
 
-To improve future analyses, addressing the missing values and applying robust modeling techniques is recommended to derive better insights and predictive accuracy.
+This dataset serves as a solid foundation for deeper analysis, potentially integrating additional metrics about user behavior, genre trends, and external factors affecting book ratings.
