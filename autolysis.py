@@ -186,7 +186,7 @@ def narrate_analysis(context, file_path):
         "3. Clustering Analysis: Interpret PCA and t-SNE visualizations.\n"
         "4. Outlier Detection: Summarize anomalies and visualizations.\n"
         "5. Regression Analysis: Summarize performance metrics and provide interpretations.\n"
-        "6. Conclusion: Provide a final summary of findings."
+        "6. Conclusion: Provide a final summary of findings"
     )
 
     headers = {
