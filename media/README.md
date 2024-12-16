@@ -38,21 +38,21 @@
 | quality       |  0.825935 |  1        |        0.312127 |
 | repeatability |  0.5126   |  0.312127 |        1        |
 
-![Correlation Heatmap](E:\Project2\media\correlation_matrix.png)
+![Correlation Heatmap](correlation_matrix.png)
 
 ## Clustering Analysis
 
 Clustering performed using PCA and t-SNE.
 
-![PCA Clustering](E:\Project2\media\pca_clustering.png)
+![PCA Clustering](pca_clustering.png)
 
-![t-SNE Clustering](E:\Project2\media\tsne_clustering.png)
+![t-SNE Clustering](tsne_clustering.png)
 
 ## Outlier Detection
 
 Outlier detection performed using Isolation Forest.
 
-![Outliers Visualization](E:\Project2\media\outliers.png)
+![Outliers Visualization](outliers.png)
 
 ## Regression Analysis
 
@@ -60,7 +60,7 @@ Outlier detection performed using Isolation Forest.
 |:------|---------------------:|-----------:|
 | Value |             0.198327 |   0.676756 |
 
-![Regression Results](E:\Project2\media\regression.png)
+![Regression Results](regression.png)
 
 ## Conclusion
 
@@ -118,11 +118,11 @@ Outlier detection was performed using the Isolation Forest algorithm to identify
 The regression analysis aimed to predict `overall` ratings based on other features with the following performance metrics:
 
 - **Mean Squared Error (MSE)**: 0.1983
-- **R² Score**: 0.6768
+- **RÂ² Score**: 0.6768
 
 ### Interpretation
 - The MSE indicates a reasonably low value, suggesting that the predicted overall ratings are closely aligned with the actual ratings with minimal error.
-- An R² score of approximately 0.68 indicates that about 68% of the variability in the `overall` ratings can be explained by the model applied. This suggests a moderately strong predictive capability of the model.
+- An RÂ² score of approximately 0.68 indicates that about 68% of the variability in the `overall` ratings can be explained by the model applied. This suggests a moderately strong predictive capability of the model.
 
 ## 6. Conclusion
 In summary, the analysis of the `media.csv` dataset provided insights into the relationships between ratings and quality, identified significant patterns via clustering, and highlighted outliers that may need further examination. The regression analysis indicated that while there is a strong capacity to predict overall ratings, there remain complexities in understanding the media fully. Further data cleaning, especially addressing missing values, and additional features may enhance insights from this dataset.
