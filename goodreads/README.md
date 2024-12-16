@@ -81,21 +81,21 @@
 | ratings_4                 | -0.407079  |          -0.0633104 |     -0.054462  | -0.0547754 |     0.349564  |  0.0101608  |                 -0.0257847  |       0.0361082  |      0.978869   |           0.987764   |                0.817826   |  0.672986   |   0.838298  |   0.952998  |   1         |  0.933785   |
 | ratings_5                 | -0.332486  |          -0.0561447 |     -0.0495245 | -0.0467453 |     0.279559  |  0.00662185 |                 -0.0153877  |       0.115412   |      0.964046   |           0.966587   |                0.76494    |  0.597231   |   0.705747  |   0.82555   |   0.933785  |  1          |
 
-![Correlation Heatmap](E:\Project2\goodreads\correlation_matrix.png)
+![Correlation Heatmap](correlation_matrix.png)
 
 ## Clustering Analysis
 
 Clustering performed using PCA and t-SNE.
 
-![PCA Clustering](E:\Project2\goodreads\pca_clustering.png)
+![PCA Clustering](pca_clustering.png)
 
-![t-SNE Clustering](E:\Project2\goodreads\tsne_clustering.png)
+![t-SNE Clustering](tsne_clustering.png)
 
 ## Outlier Detection
 
 Outlier detection performed using Isolation Forest.
 
-![Outliers Visualization](E:\Project2\goodreads\outliers.png)
+![Outliers Visualization](outliers.png)
 
 ## Regression Analysis
 
@@ -103,7 +103,7 @@ Outlier detection performed using Isolation Forest.
 |:------|---------------------:|-----------:|
 | Value |          5.95767e+13 |  0.0191922 |
 
-![Regression Results](E:\Project2\goodreads\regression.png)
+![Regression Results](regression.png)
 
 ## Conclusion
 
@@ -168,10 +168,10 @@ We used the Isolation Forest method for detecting outliers.
 Regression analysis metrics were calculated to evaluate relationships in the dataset.
 
 - **Mean Squared Error**: 59,576,742,640,582.23
-- **R² Score**: 0.0192
+- **RÂ² Score**: 0.0192
 
 ### Interpretation:
-The regression model did not perform strongly, indicated by a low R² score suggesting less than 2% of variance in the response variable being explained. This implies that many other external factors may influence book ratings beyond the features included in this dataset.
+The regression model did not perform strongly, indicated by a low RÂ² score suggesting less than 2% of variance in the response variable being explained. This implies that many other external factors may influence book ratings beyond the features included in this dataset.
 
 ## 6. Conclusion
 The Goodreads dataset provides a rich source of information on book ratings, authors, and readership trends. Key findings include the overall high average ratings, significant correlations between the counts of ratings and reviews, strong clustering of books based on ratings, and the identification of outliers within review counts. 
