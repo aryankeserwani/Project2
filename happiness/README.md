@@ -51,21 +51,21 @@
 | Positive affect                  |  0.0130525 |     0.515283  |          0.230868    |        0.424524  |                          0.217982  |                       0.578398 |  0.300608    |                  -0.274208  |         1         |        -0.334451  |
 | Negative affect                  |  0.207642  |    -0.352412  |         -0.260689    |       -0.454878  |                         -0.15033   |                      -0.278959 | -0.0719746   |                   0.265555  |        -0.334451  |         1         |
 
-![Correlation Heatmap](E:\Project2\happiness\correlation_matrix.png)
+![Correlation Heatmap](correlation_matrix.png)
 
 ## Clustering Analysis
 
 Clustering performed using PCA and t-SNE.
 
-![PCA Clustering](E:\Project2\happiness\pca_clustering.png)
+![PCA Clustering](pca_clustering.png)
 
-![t-SNE Clustering](E:\Project2\happiness\tsne_clustering.png)
+![t-SNE Clustering](tsne_clustering.png)
 
 ## Outlier Detection
 
 Outlier detection performed using Isolation Forest.
 
-![Outliers Visualization](E:\Project2\happiness\outliers.png)
+![Outliers Visualization](happiness\outliers.png)
 
 ## Regression Analysis
 
@@ -73,7 +73,7 @@ Outlier detection performed using Isolation Forest.
 |:------|---------------------:|-----------:|
 | Value |              1.25079 | 0.00462067 |
 
-![Regression Results](E:\Project2\happiness\regression.png)
+![Regression Results](regression.png)
 
 ## Conclusion
 
@@ -90,7 +90,7 @@ The dataset 'happiness.csv' consists of various metrics that are commonly associ
 - **Social support**: A measure of social support received by individuals.
 - **Healthy life expectancy at birth**: The average number of years a newborn is expected to live in good health.
 - **Freedom to make life choices**: Index indicating the level of personal freedoms in decision-making.
-- **Generosity**: A score indicating the generosity of the country’s population.
+- **Generosity**: A score indicating the generosity of the countryâ€™s population.
 - **Perceptions of corruption**: A score reflecting perceived corruption within the country.
 - **Positive affect**: Measure of positive emotions experienced.
 - **Negative affect**: Measure of negative emotions experienced.
@@ -157,10 +157,10 @@ A regression analysis was conducted to model the relationships between the featu
 
 ### Performance Metrics
 - **Mean Squared Error (MSE)**: 1.2508
-- **R² Score**: 0.0046
+- **RÂ² Score**: 0.0046
 
 ### Interpretations
-The low R² score indicates that the model explains only a tiny portion of the variability in happiness scores, suggesting that other variables not included in the dataset or perhaps nonlinear relationships may be significant contributors to happiness levels across countries.
+The low RÂ² score indicates that the model explains only a tiny portion of the variability in happiness scores, suggesting that other variables not included in the dataset or perhaps nonlinear relationships may be significant contributors to happiness levels across countries.
 
 ## 6. Conclusion
 
